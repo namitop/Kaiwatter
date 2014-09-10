@@ -1,4 +1,4 @@
-package com.example.shiraki_hirotomo.kaiwatter.contsants;
+package com.example.shiraki_hirotomo.kaiwatter.constants;
 
 /**
  * Created by mochizuki-miho on 2014/09/10.
