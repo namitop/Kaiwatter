@@ -6,5 +6,6 @@
     <string name="action_settings">Settings</string>
     <string name="menu_reload">更新</string>
     <string name="menu_tweet">つぶやく</string>
+    <string name="twitter_callback_url">kaiwatter://twitter</string>
 
 </resources>

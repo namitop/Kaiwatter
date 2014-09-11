@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.shiraki_hirotomo.kaiwatter" >
+    android:versionCode="1"
+    android:versionName="1.0"
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="19"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -17,9 +24,20 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".TweetActivity"/>
+            android:name=".TweetActivity"
+            android:windowSoftInputMode="adjustResize"/>
         <activity
-            android:name=".TwitterOAuthActivity"/>
+            android:name=".TwitterOAuthActivity"
+            android:launchMode="singleTask" >
+            <intent-inflater>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data
+                    android:host="twitter"
+                    android:scheme="kaiwatter" />
+            </intent-inflater>
+        </activity>
     </application>
 
 </manifest>

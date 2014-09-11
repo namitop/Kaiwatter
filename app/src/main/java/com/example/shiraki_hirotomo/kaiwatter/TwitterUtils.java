@@ -2,6 +2,7 @@ package com.example.shiraki_hirotomo.kaiwatter;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
 
 import com.example.shiraki_hirotomo.kaiwatter.constants.Config;
 
@@ -43,6 +44,26 @@ public class TwitterUtils {
         }
         //返り値をtwitterにしている
         return twitter;
+    }
+
+    /**
+     * アクセストークンをプリファレンスに保存します。
+     *
+     * @param context
+     * @param accessToken
+     */
+    public static void storeAccessToken(Context context, AccessToken accessToken) {
+        // コンテキストからPREF_NAMEをキーにSharedPreferenceのインスタンスを取得している
+        SharedPreferences preferences = context.getSharedPreferences(PREF_NAME,
+                Context.MODE_PRIVATE);
+        // Editorのインスタンスを取得
+        Editor editor = preferences.edit();
+        //editorに、TOKENをキーにしてaccessTokenのtokenを追加している
+        editor.putString(TOKEN, accessToken.getToken());
+        //editorに、TOKENをキーにしてaccessTokenのtokensecretを追加している
+        editor.putString(TOKEN_SECRET, accessToken.getTokenSecret());
+        //editorの変更をコミットする。
+        editor.commit();
     }
 
     /**
