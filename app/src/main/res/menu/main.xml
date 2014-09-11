@@ -1,8 +1,24 @@
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".MainActivity" >
-    <item android:id="@+id/action_settings"
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity" -->
+    <!--<item android:id="@+id/action_settings"
         android:title="@string/action_settings"
         android:orderInCategory="100"
-        android:showAsAction="never" />
+        android:showAsAction="never" />-->
+
+    <item
+        android:id="@+id/menu_reload"
+        android:icon="@drawable/ic_action_reload"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:title="@string/menu_reload"/>
+
+    <item
+        android:id="@+id/menu_tweet"
+        android:icon="@drawable/ic_action_compose"
+        android:orderInCategory="200"
+        android:showAsAction="always"
+        android:title="@string/menu_tweet"/>
+
+
 </menu>

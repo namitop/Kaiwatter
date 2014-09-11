@@ -4,5 +4,7 @@
     <string name="app_name">Kaiwatter</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="menu_reload">更新</string>
+    <string name="menu_tweet">つぶやく</string>
 
 </resources>
