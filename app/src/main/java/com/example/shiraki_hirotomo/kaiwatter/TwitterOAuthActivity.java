@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
+import com.example.shiraki_hirotomo.kaiwatter.constants.Config;
+
 import twitter4j.Twitter;
 import twitter4j.TwitterException;
 import twitter4j.auth.AccessToken;
@@ -33,7 +35,7 @@ public class TwitterOAuthActivity extends Activity {
         //viewをセットする。
         setContentView(R.layout.activity_twitter_oauth);
         //mCallbackURLにtwitter_callback_urlの文字列を代入
-        mCallbackURL = getString(R.string.twitter_callback_url);
+        mCallbackURL = Config.CALLBACK_URL;
         // TwitterUtilsのgetTwitterInstanceによってコンシューマ・キーやコンシューマ・シークレット、アクセストークンがセットされたTwitter型のインスタンスが代入されている。
         mTwitter = TwitterUtils.getTwitterInstance(this);
         //idがbutton_twitter_oauthのボタンをおしたときの反応の設定
