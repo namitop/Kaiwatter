@@ -29,14 +29,14 @@
         <activity
             android:name=".TwitterOAuthActivity"
             android:launchMode="singleTask" >
-            <intent-inflater>
+            <intent-filter>
                 <action android:name="android.intent.action.VIEW"/>
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
                 <data
                     android:host="twitter"
                     android:scheme="kaiwatter" />
-            </intent-inflater>
+            </intent-filter>
         </activity>
     </application>
 
